@@ -144,3 +144,9 @@ button:hover {
   font-size: 18px;
   font-weight: bold;
 }
+
+
+.ProfileContainer{
+  background:linear-gradient(180deg,#f5f4fa,rgba(251,251,253,0));
+  min-height: 91vh;
+}

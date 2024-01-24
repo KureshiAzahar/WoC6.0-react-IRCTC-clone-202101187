@@ -1,15 +1,31 @@
-import React, { useState } from "react";
+import { React,  useEffect,  useState } from "react";
 import { database } from "./FirebaseConfig";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
+import { onAuthStateChanged } from "firebase/auth";
 
 export function RegisterAndLogin() {
   const [login, setLogin] = useState(false);
 
   const history = useNavigate();
+
+  const [user,setUser] = useState(null);
+
+  useEffect(()=>{
+    onAuthStateChanged(database, (user)=>{
+      if(user){
+        console.log("User is logged in..");
+        setUser(user);
+      }
+      else{
+        console.log("User is logged out...");
+        setUser(null);
+      }
+    })
+  },[])
 
   const handleSubmit = (e, type) => {
     e.preventDefault();
@@ -47,15 +63,13 @@ export function RegisterAndLogin() {
           <div
             className={login == false ? "activeColor" : "pointer"}
             onClick={() => setLogin(false)}
-          >
-            SignUp
+          > SignUp
           </div>
 
           <div
             className={login == true ? "activeColor" : "pointer"}
             onClick={() => setLogin(true)}
-          >
-            SignIn
+          > SignIn
           </div>
         </div>
         <h1>{login ? "SignIn" : "SignUp"}</h1>

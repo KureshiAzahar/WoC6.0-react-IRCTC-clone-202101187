@@ -7,9 +7,10 @@ const firebaseConfig = {
   projectId: "irctc-f3649",
   storageBucket: "irctc-f3649.appspot.com",
   messagingSenderId: "357030882331",
-  appId: "1:357030882331:web:03de2ec21864c58fbbdcbe"
+  appId: "1:357030882331:web:03de2ec21864c58fbbdcbe",
+  databaseURL: "https://irctc-f3649-default-rtdb.firebaseio.com/",
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 export const database = getAuth(app);
