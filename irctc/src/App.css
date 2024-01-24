@@ -60,13 +60,16 @@ nav{
 nav a{
   color: whitesmoke;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: all 0.30s;
   font-weight:700;
+  border-bottom: 3px solid #225867;
 }
 
 a:hover{
   scale: 1.2;
   color:antiquewhite;
+  border-bottom: 2px solid whitesmoke;
+  margin-top: -5px;
 }
 
 .row div:hover {
@@ -148,5 +151,80 @@ button:hover {
 
 .ProfileContainer{
   background:linear-gradient(180deg,#f5f4fa,rgba(251,251,253,0));
-  min-height: 91vh;
+  display: flex;
+  justify-content:center;
+  align-items:start;
+  margin-top:20px
 }
+
+.UserData{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 4px solid #406c78;
+  padding: 15px 60px 15px 60px;
+  width: fit-content;
+}
+
+.userphoto{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 4px #406c78;
+  padding: 20px 40px;
+  width: fit-content;
+  
+}
+
+.UserData label{
+  border: 1px  #0e3039;
+  padding: 10px 7px 10px 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-bottom: -20px;
+  background-color: #f5f4fa;
+  z-index: 5;
+  color: #225867;
+  font-weight: 600;
+  text-align: start; 
+}
+
+.UserData div{
+  border: 2px solid #0e3039;
+  padding: 18px 0 18px 40px;
+  font-size: 18px;
+  width: 250px;
+  text-align: start;
+  border-radius: 4px;
+  background-color: #dcdbe416;
+}
+
+.UserData p{
+  color: #0e3039;
+  font-size: 22px;
+  margin: 10px 0;
+  font-weight: 700;
+  text-align: start;
+}
+
+.UserData a{
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 3px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: #225867;
+  color: white;
+  text-decoration: none;
+  transition: all 0.35s;
+}
+
+.UserData a:hover{
+  scale: 1.1;
+}
+
+
+
